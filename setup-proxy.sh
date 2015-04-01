@@ -14,7 +14,7 @@ function usage() {
 
 export PROXY_IP=$DEFAULT_IP
 export LOCAL_PORT=$DEFAULT_PORT
-while getopts 'u:h:i:p' OPTION
+while getopts ':u:h:i:p:' OPTION
 do
      case $OPTION in
          u)
@@ -42,9 +42,9 @@ if [ -z $HOST_NAME ]; then
 	exit 1
 fi
 echo removing existing settings
-sed -i.bak s/.*#proxy-setup$/g /etc/hosts
+sed -i /#proxy-setup$/d /etc/hosts
 echo deleting actual vm
 vagrant destroy
-echo setting up https://$HOST_NAME \(ip: $PROXY_IP\)=\> http://localhost:$LOCAL_PORT...
+echo setting up https://$HOST_NAME \(ip: $PROXY_IP\)=\> http\:\/\/localhost\:$LOCAL_PORT...
 echo $PROXY_IP	$HOST_NAME \#proxy-setup>> /etc/hosts
 vagrant up --destroy-on-error
