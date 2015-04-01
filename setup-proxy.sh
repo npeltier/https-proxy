@@ -6,10 +6,10 @@ function usage() {
 	echo usage: $0 options
 	echo This script runs an https proxy pointing to your local host, at a given port
 	echo OPTIONS:
-	echo	-h      Show this message
-	echo	-host   the host name of the proxy \(no default\)
-	echo	-ip     the ip of the proxy \(has to be available, default $DEFAULT_IP\)
-	echo	-port   port on which this proxy should point to \(default $DEFAULT_PORT\)
+	echo	-u     Show this message
+	echo	-h     the host name of the proxy \(no default\)
+	echo	-i     the ip of the proxy \(has to be available, default $DEFAULT_IP\)
+	echo	-p     port on which this proxy should point to \(default $DEFAULT_PORT\)
 }
 
 export PROXY_IP=$DEFAULT_IP
