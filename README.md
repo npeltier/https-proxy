@@ -1,7 +1,15 @@
 # https-proxy
 proxies a https://hotsname to a local server
 - using vagrant to host a debian VM with nginx
+- generate self-signed certificate assigned to hostname
 - modifies your /etc/hosts to use the VM ip to mock the hostname
+
+## requirements
+for this to run, you need: 
+- unix (only tested on mac so far)
+- vagrant & VirtualBox (only tested with this conf)
+
+## usage
 ```
 usage: ./setup-proxy.sh options
 
