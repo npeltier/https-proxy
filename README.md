@@ -7,8 +7,10 @@ proxies a https://hotsname to a local server
 ## requirements
 for this to run, you need: 
 - unix (only tested on mac so far)
-- vagrant & VirtualBox (only tested with this conf)
+- vagrant [0] & VirtualBox [1] (only tested with this conf)
 
+[0] https://www.vagrantup.com/downloads.html
+[1] http://www.oracle.com/technetwork/server-storage/virtualbox/downloads/index.html
 ## usage
 ```
 usage: ./setup-proxy.sh options
