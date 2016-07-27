@@ -36,8 +36,14 @@ do
              ;;
      esac
 done
+
+if [ ! -w /etc/hosts ]; then
+	echo your user cannot write onto /etc/hosts, please use a more privileged user
+	exit 1
+fi
+
 if [ -z $HOST_NAME ]; then
-  echo no valid hostname provided
+	echo no valid hostname provided
 	usage
 	exit 1
 fi
