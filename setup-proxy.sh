@@ -48,7 +48,7 @@ if [ -z $HOST_NAME ]; then
 	exit 1
 fi
 echo removing existing settings
-sed -i /#proxy-setup$/d /etc/hosts
+sed -i '/#proxy-setup$/d' /etc/hosts
 echo deleting actual vm
 vagrant destroy
 echo setting up https://$HOST_NAME \(ip: $PROXY_IP\)=\> http\:\/\/localhost\:$LOCAL_PORT...
